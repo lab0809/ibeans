@@ -1,0 +1,40 @@
+//spファーストの場合
+$point-lsp: 375px;
+$point-lsp2: 568px;
+$point-tablet: 768px;
+$point-spc: 960px;
+$point-pc: 1200px;
+
+@mixin font-size($size) {
+font-size: ($sixe / 16 ) + rem ;
+}
+
+@mixin sp {
+@media (min-width:$point-lsp) {
+@content;
+}
+}
+
+@mixin sp2 {
+  @media (min-width:$point-lsp2) {
+  @content;
+  }
+  }
+
+@mixin tablet {
+@media (min-width:$point-tablet) {
+@content;
+}
+}
+
+@mixin spc {
+  @media (min-width:$point-spc) {
+    @content;
+  }
+}
+
+@mixin pc {
+@media (min-width:$point-pc) {
+@content;
+}
+}
